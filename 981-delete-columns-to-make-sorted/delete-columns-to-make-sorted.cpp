@@ -1,17 +1,16 @@
 class Solution {
 public:
-bool unsorted(vector<string> &strs, int j){
-    for(int i=1;i<strs.size();i++){
-        if(strs[i][j]<strs[i-1][j])
-        return true;
-    }
-    return false;
-}
-    int minDeletionSize(vector<string>& strs) {
-        int count=0;
-        for(int j=0;j<strs[0].size();j++){
-            count+=unsorted(strs,j);
+int minDeletionSize(vector<string>& strs) {
+    int count=0;
+    for(int i=0;i<strs[0].size();i++){
+        for(int j=1;j<strs.size();j++){
+            if(strs[j][i]<strs[j-1][i]){
+                count++;
+                break;
+            }
         }
-        return count;
+    }
+    return count;
+
     }
 };
