@@ -10,8 +10,8 @@ public:
                     lasers+=1;
                 }
             }
-            ans+=lastrow*lasers;
             if(lasers!=0){
+             ans+=lastrow*lasers;   
              lastrow=lasers;
             }
         }
