@@ -8,7 +8,7 @@ public:
         for(int i=0;i<operations.size();i++){
             nums[m[operations[i][0]]]=operations[i][1];
             m[operations[i][1]]=m[operations[i][0]];
-            m.erase(operations[i][0]);
+            //m.erase(operations[i][0]);
         }
         return nums;
     }
