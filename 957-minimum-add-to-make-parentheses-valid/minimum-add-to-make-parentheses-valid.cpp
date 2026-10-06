@@ -15,8 +15,7 @@ public:
             o++;
         }
        }
-       int dif=abs(c-o);
-       ans+=dif;
+       ans+=abs(c-o);
        return ans;
     }
 };
