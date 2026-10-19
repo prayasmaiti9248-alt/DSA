@@ -1,12 +1,11 @@
 class Solution {
 public:
     bool detectCapitalUse(string word) {
-        bool fc=false;
         bool c=false;
         bool l=false;
         for(int i=0;i<word.size();i++){
             if(isupper(word[i])&&i==0){
-                fc=true;
+                continue;
             }
             else if(isupper(word[i])){
                 c=true;
